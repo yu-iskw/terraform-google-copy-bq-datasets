@@ -1,5 +1,5 @@
-# terraform-copy-bigquery-datasets
-[![Lint terraform files](https://github.com/yu-iskw/terraform-copy-bigquery-datasets/actions/workflows/lint.yml/badge.svg)](https://github.com/yu-iskw/terraform-copy-bigquery-datasets/actions/workflows/lint.yml)
+# terraform-google-copy-bq-datasets
+[![Lint terraform files](https://github.com/yu-iskw/terraform-google-copy-bq-datasets/actions/workflows/lint.yml/badge.svg)](https://github.com/yu-iskw/terraform-google-copy-bq-datasets/actions/workflows/lint.yml)
 
 This is a terraform module to copy BigQuery datasets across regions.
 
@@ -8,7 +8,7 @@ This is a terraform module to copy BigQuery datasets across regions.
 ## How to use
 ```terraform
 module "copy_dataset" {
-  source = "git::git@github.com:yu-iskw/terraform-copy-bigquery-datasets.git?ref=v0.1.0"
+  source = "git::git@github.com:yu-iskw/terraform-google-copy-bq-datasets.git?ref=v0.2.0"
 
   source_dataset = {
     project_id = "source-project"
