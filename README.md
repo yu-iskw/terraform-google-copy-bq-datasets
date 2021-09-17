@@ -6,6 +6,8 @@ This is a terraform module to copy BigQuery datasets across regions.
 ## How to use
 ```terraform
 module "copy_dataset" {
+  source = "git::git@github.com:yu-iskw/terraform-copy-bigquery-datasets.git?ref=v0.1.0"
+
   source_dataset = {
     project_id = "source-project"
     dataset_id = "source_dataset"
