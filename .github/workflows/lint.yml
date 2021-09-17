@@ -1,0 +1,22 @@
+name: "Lint terraform files"
+
+on:
+  push:
+    paths:
+      - "*.tf"
+
+env:
+  TERRAFORM_VERSION: 1.0.0
+
+jobs:
+
+  check:
+    runs-on: ubuntu-latest
+    needs: [setup-matrix]
+    steps:
+      - uses: actions/checkout@master
+      - uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: ${{ env.TERRAFORM_VERSION }}
+      - id: fmt
+        run: terraform fmt -check
