@@ -4,7 +4,7 @@ data "google_project" "destination_project" {
 
 resource "google_project_iam_member" "permissions" {
   project = var.destination_dataset.project_id
-  role    = "roles/iam.serviceAccountShortTermTokenMinter"
+  role    = "roles/iam.serviceAccountTokenCreator"
   member  = "serviceAccount:service-${data.google_project.destination_project.number}@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com"
 }
 
