@@ -25,5 +25,7 @@ module "copy_dataset" {
   # The service account has to have permissions to run Data Transfer jobs and create
   # datasets in the destination project and permissions to read the source dataset.
   service_account = "coping-bq-datasets@destination-project.iam.gserviceaccount.com"
+  
+  job_id = "coping-bq-datasets-job"
 }
 ```
